@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>VR Interioristas</title>
+
+    <!-- jQuery -->
+    <script src="javascripts/jquery.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+<body>
+    <div class="container text-grey">
+        <div id="space"></div>
+        <div id="main">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="images/logo.svg"
+                         class="img-responsive center-block"/>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Viviana y Valeria Ruiz</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Sitio web en construcción.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // This function positions the element in the middle of the browser window.
+        function addSpace($element) {
+            var $windowWidth = $(window).width();
+            var $windowHeight = $(window).height();
+            var $elementWidth = $element.outerWidth();
+            var $elementHeight = $element.outerHeight();
+            var $space = $('#space');
+
+            $space.css({
+                'height': ($windowHeight - $elementHeight) / 2 + 'px'
+            });
+        }
+        $(document).ready(function() {
+            addSpace($('#main'));
+        });
+        $(window).resize(function() {
+            addSpace($('#main'));
+        });
+    </script>
+</body>
+</html>
