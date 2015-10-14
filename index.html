@@ -3,14 +3,10 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>VR Interioristas</title>
-
-    <!-- jQuery -->
-    <script src="javascripts/jquery.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet"
+          type="text/css"
+          href="public/css/styles.css"
+          media="screen">
 </head>
 <body>
     <div class="container text-grey">
@@ -18,7 +14,7 @@
         <div id="main">
             <div class="row">
                 <div class="col-md-12">
-                    <img src="images/logo.svg"
+                    <img src="public/images/logo.svg"
                          class="img-responsive center-block"/>
                     <hr>
                 </div>
@@ -30,30 +26,13 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <a href="home.html">ENTRAR</a>
+                    <a href="src/home.html">ENTRAR</a>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        // This function positions the element in the middle of the browser window.
-        function addSpace($element) {
-            var $windowWidth = $(window).width();
-            var $windowHeight = $(window).height();
-            var $elementWidth = $element.outerWidth();
-            var $elementHeight = $element.outerHeight();
-            var $space = $('#space');
-
-            $space.css({
-                'height': ($windowHeight - $elementHeight) / 2 + 'px'
-            });
-        }
-        $(document).ready(function() {
-            addSpace($('#main'));
-        });
-        $(window).resize(function() {
-            addSpace($('#main'));
-        });
-    </script>
+    <script src="public/js/vendor.js"></script>
+    <script src="public/js/vendor.bundle.js"></script>
+    <script src="public/js/bundle.js"></script>
 </body>
 </html>
