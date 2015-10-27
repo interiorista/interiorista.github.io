@@ -5,8 +5,10 @@
 
 {% import 'macros/header.nunjucks' as nav %}
 
-{{ nav.active('project', project.title) }}
+<div class="wrapper">
+<div class="container">
 
+{{ nav.active('project', project.title) }}
 <main>
     <section class="row text-center project-gallery">
         <div class="col-lg-3 col-md-3"></div>
@@ -39,5 +41,7 @@
         {% endfor %}
     </section>
 </main>
+</div>
+</div>
 
 {% endblock %}
