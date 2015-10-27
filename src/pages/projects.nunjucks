@@ -1,0 +1,43 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% import 'macros/header.nunjucks' as nav %}
+{{nav.active('projects')}}
+
+<div class="container">
+    <main>
+        <div class="row text-center">
+            <div class="col-lg-12
+                            col-md-12
+                            col-sm-12
+                            col-xs-12">
+                <div class="carousel">
+                    {% for key, project in projects %}
+                    <div>
+                        <img class="img-carousel"
+                             src="{{project.imageDir + project.mainImage}}"
+                             alt="{{project.title}}" />
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="row img-gallery">
+        {% for key, project in projects %}
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project"
+             style="background-image:
+             url('{{project.imageDir + project.mainImage}}')">
+            <div class="project-hover"
+                 data-nav="{{project.href}}">
+                <h4 class="project-text">
+                    {{project.title}}
+                </h4>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</div>
+
+{% endblock %}

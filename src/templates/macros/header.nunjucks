@@ -1,0 +1,60 @@
+{% macro active(activePage='home', title='') %}
+
+<header class="row text-center text-grey">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container header-container">
+            <div class="header-row row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 logo">
+                    <div class="row">
+                        <div class="col-lg-12
+                                        col-md-12
+                                        col-sm-12
+                                        col-xs-12">
+                            <img src="public/images/logo.svg"
+                                 class="img-responsive center-block"/>
+                        </div>
+                        <div class="col-lg-12
+                                        col-md-12
+                                        col-sm-12
+                                        col-xs-12">
+                            <h4 class="header-subtitle">
+                                Viviana & Valeria Ruiz
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <h4 class="text-uppercase">Nosotras</h4>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <h4 class="text-uppercase">Residencial</h4>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <h4 class="text-uppercase">Comercial</h4>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <h4 class="text-uppercase">Contacto</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row hr"></div>
+        </div>
+
+        {% if activePage == 'project' %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 project-nav">
+                    <h4>
+                        {{ title }}
+                    </h4>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+    </nav>
+</header>
+
+{% endmacro %}

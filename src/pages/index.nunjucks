@@ -1,0 +1,26 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+<div id="space"></div>
+<div id="main" class="text-grey">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="public/images/logo.svg"
+                 class="img-responsive center-block"/>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Viviana y Valeria Ruiz</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a class="grey" href="projects.html">ENTRAR</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
