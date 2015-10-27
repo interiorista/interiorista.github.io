@@ -1,0 +1,40 @@
+{
+    "projects": {
+        "paz-soldan": {
+            "title": "Departamento Paz Soldán",
+            "imageDir": "public/images/paz-soldan/",
+            "mainImage": "1.jpg",
+            "href": "paz-soldan.html"
+        },
+        "monte-carmelo": {
+            "title": "Departamento Monte Carmelo",
+            "imageDir": "public/images/monte-carmelo/",
+            "mainImage": "1.jpg",
+            "href": "monte-carmelo.html"
+        },
+        "la-floresta": {
+            "title": "Departamento La Floresta",
+            "imageDir": "public/images/la-floresta/",
+            "mainImage": "1.jpg",
+            "href": "la-floresta.html"
+        },
+        "inzag": {
+            "title": "Oficinas Inzag",
+            "imageDir": "public/images/inzag/",
+            "mainImage": "1.jpg",
+            "href": "inzag.html"
+        },
+        "golf-los-incas": {
+            "title": "Departamento Golf Los Incas",
+            "imageDir": "public/images/golf-los-incas/",
+            "mainImage": "1.jpg",
+            "href": "golf-los-incas.html"
+        },
+        "angamos": {
+            "title": "Departamento Avenida Angamos",
+            "imageDir": "public/images/angamos/",
+            "mainImage": "1.jpg",
+            "href": "angamos.html"
+        }
+    }
+}
