@@ -13,6 +13,10 @@ import cssmin from 'gulp-cssmin';
 import less from 'gulp-less';
 import plumber from 'gulp-plumber';
 import autoprefixer from 'gulp-autoprefixer';
+import nunjucksRender from 'gulp-nunjucks-render';
+import data from 'gulp-data';
+import fs from 'fs';
+import nunjucks from 'nunjucks';
 
 const dependencies = [
     'underscore'
@@ -70,7 +74,47 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
     gulp.watch('src/less/**/*.less', ['styles']);
     gulp.watch('src/main.js', ['browserify']);
+    gulp.watch('src/**/*.nunjucks', ['nunjucks', 'projects']);
+    gulp.watch('src/data/*.json', ['nunjucks', 'projects']);
 });
 
-gulp.task('build', ['fonts', 'styles', 'vendor', 'browserify', 'watch']);
+gulp.task('nunjucks', function() {
+    nunjucksRender.nunjucks.configure(['src/templates/']);
+
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('src/pages/**/*.+(html|nunjucks)')
+        .pipe(data(function() {
+            return JSON.parse(fs.readFileSync('src/data/projects.json', 'utf8'));
+        }))
+        .pipe(nunjucksRender())
+        .pipe(gulp.dest('.'))
+});
+
+gulp.task('projects', function() {
+    nunjucks.configure(['src/templates/']);
+    let json = JSON.parse(fs.readFileSync('src/data/projects.json', 'utf8')),
+        projects = json.projects;
+    for (var key in projects) {
+        let project = projects[key];
+        let images = fs.readdirSync(project.imageDir);
+        project['images'] = images;
+        var html = nunjucks.render('project.nunjucks',
+            {
+                project: project,
+                projects: projects
+            });
+        fs.writeFileSync(project.href, html);
+    }
+});
+
+gulp.task('build',
+          [
+              'fonts',
+              'styles',
+              'vendor',
+              'browserify',
+              'watch',
+              'nunjucks',
+              'projects'
+          ]);
 gulp.task('default', ['build']);
