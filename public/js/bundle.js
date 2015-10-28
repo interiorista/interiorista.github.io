@@ -58,6 +58,49 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000
     });
+
+    var isResidentialView = true,
+        isCommercialView = true;
+
+    $('.toggleResidential').click(function () {
+        $(window).scrollTop($('.img-gallery').position().top);
+        if (isResidentialView) {
+            if (!isCommercialView) {
+                $('.commercial').show();
+                isCommercialView = true;
+                $('.toggleResidential').removeClass('text-bold');
+            } else {
+                $('.commercial').hide();
+                isCommercialView = false;
+                $('.toggleResidential').addClass('text-bold');
+            }
+        } else {
+            isResidentialView = true;
+            $('.residential').show();
+            $('.toggleResidential').removeClass('text-bold');
+            $('.toggleCommercial').removeClass('text-bold');
+        }
+    });
+
+    $('.toggleCommercial').click(function () {
+        $(window).scrollTop($('.img-gallery').position().top);
+        if (isCommercialView) {
+            if (!isResidentialView) {
+                $('.residential').show();
+                isResidentialView = true;
+                $('.toggleCommercial').removeClass('text-bold');
+            } else {
+                $('.residential').hide();
+                isResidentialView = false;
+                $('.toggleCommercial').addClass('text-bold');
+            }
+        } else {
+            isCommercialView = true;
+            $('.commercial').show();
+            $('.toggleCommercial').removeClass('text-bold');
+            $('.toggleResidential').removeClass('text-bold');
+        }
+    });
 });
 
 $(window).resize(function () {
