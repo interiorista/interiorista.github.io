@@ -4,37 +4,43 @@
             "title": "Departamento Paz Soldán",
             "imageDir": "public/images/paz-soldan/",
             "mainImage": "1.jpg",
-            "href": "paz-soldan.html"
+            "href": "paz-soldan.html",
+            "type": "residential"
         },
         "monte-carmelo": {
             "title": "Departamento Monte Carmelo",
             "imageDir": "public/images/monte-carmelo/",
             "mainImage": "1.jpg",
-            "href": "monte-carmelo.html"
+            "href": "monte-carmelo.html",
+            "type": "residential"
         },
         "la-floresta": {
             "title": "Departamento La Floresta",
             "imageDir": "public/images/la-floresta/",
             "mainImage": "1.jpg",
-            "href": "la-floresta.html"
+            "href": "la-floresta.html",
+            "type": "residential"
         },
         "inzag": {
             "title": "Oficinas Inzag",
             "imageDir": "public/images/inzag/",
             "mainImage": "1.jpg",
-            "href": "inzag.html"
+            "href": "inzag.html",
+            "type": "commercial"
         },
         "golf-los-incas": {
             "title": "Departamento Golf Los Incas",
             "imageDir": "public/images/golf-los-incas/",
             "mainImage": "1.jpg",
-            "href": "golf-los-incas.html"
+            "href": "golf-los-incas.html",
+            "type": "residential"
         },
         "angamos": {
             "title": "Departamento Avenida Angamos",
             "imageDir": "public/images/angamos/",
             "mainImage": "1.jpg",
-            "href": "angamos.html"
+            "href": "angamos.html",
+            "type": "residential"
         }
     }
 }

@@ -28,10 +28,14 @@
                     <h4 class="text-uppercase">Nosotras</h4>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-                    <h4 class="text-uppercase">Residencial</h4>
+                    <h4 class="text-uppercase filter toggleResidential">
+                        Residencial
+                    </h4>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-                    <h4 class="text-uppercase">Comercial</h4>
+                    <h4 class="text-uppercase filter toggleCommercial">
+                        Comercial
+                    </h4>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
                     <h4 class="text-uppercase">Contacto</h4>
