@@ -21,6 +21,7 @@ function addSpace($element) {
 $(document).ready(function () {
     addSpace($('#main'));
 
+    // Load images gallery.
     var $grid = $('.grid');
     imagesLoaded($grid, function () {
         // Initialise Masonry
@@ -41,6 +42,7 @@ $(document).ready(function () {
         }, "slow");
     });
 
+    // Load projects gallery.
     var $gallery = $('.img-gallery');
     imagesLoaded($gallery, function () {
 

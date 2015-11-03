@@ -41,6 +41,16 @@
             "mainImage": "1.jpg",
             "href": "angamos.html",
             "type": "residential"
+        },
+        "quiñones": {
+            "title": "Departamento José Quiñones",
+            "imageDir": "public/images/quiñones/",
+            "mainImage": "1.jpg",
+            "href": "quiñones.html",
+            "type": "residential"
         }
+    },
+    "carousel": {
+        "imageDir": "public/images/carousel/"
     }
 }

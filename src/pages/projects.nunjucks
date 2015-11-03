@@ -14,10 +14,10 @@
                             col-sm-12
                             col-xs-12">
                 <div class="carousel">
-                    {% for key, project in projects %}
+                    {% for img in carousel %}
                     <div>
                         <img class="img-carousel"
-                             src="{{project.imageDir + project.mainImage}}"
+                             src="public/images/carousel/{{img}}"
                              alt="{{project.title}}" />
                     </div>
                     {% endfor %}

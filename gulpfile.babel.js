@@ -81,10 +81,17 @@ gulp.task('watch', function() {
 gulp.task('nunjucks', function() {
     nunjucksRender.nunjucks.configure(['src/templates/']);
 
+    let json = JSON.parse(fs.readFileSync('src/data/carousel.json', 'utf8')),
+        carousel = json.carousel,
+        images = fs.readdirSync(carousel.imageDir);
+
     // Gets .html and .nunjucks files in pages
     return gulp.src('src/pages/**/*.+(html|nunjucks)')
         .pipe(data(function() {
-            return JSON.parse(fs.readFileSync('src/data/projects.json', 'utf8'));
+            let doc = JSON.parse(fs.readFileSync('src/data/projects.json',
+                                                 'utf8'));
+            doc['carousel'] = images;
+            return doc;
         }))
         .pipe(nunjucksRender())
         .pipe(gulp.dest('.'))
