@@ -21,6 +21,26 @@ function addSpace($element) {
 $(document).ready(function () {
     addSpace($('#main'));
 
+    var $grid = $('.grid');
+    imagesLoaded($grid, function () {
+        // Initialise Masonry
+        $grid.masonry({
+
+            // set itemSelector so .grid-sizer is not used in layout
+            itemSelector: '.grid-item',
+            stamp: '.stamp',
+
+            // use element for option
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+
+        // Ease in the grid.
+        $grid.animate({
+            "opacity": 1
+        }, "slow");
+    });
+
     var $gallery = $('.img-gallery');
     imagesLoaded($gallery, function () {
 
