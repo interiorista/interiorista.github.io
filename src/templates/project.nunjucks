@@ -11,12 +11,18 @@
 {{ nav.active('project', project.title) }}
 <main>
     <section class="row text-center project-gallery">
-        <div class="col-lg-3 col-md-3"></div>
-        <div class="col-lg-9 col-md-9">
-            <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs"></div>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item visible-xs">
+                    <div class="project-title">
+                        <h4>{{ project.title }}</h4>
+                    </div>
+                </div>
                 {% for image in project.images %}
-                <div>
-                    <img class="img-full"
+                <div class="grid-item">
+                    <img class="img-responsive"
                          src="{{project.imageDir + image}}"
                          alt="{{project.title}}" />
                 </div>
@@ -24,10 +30,15 @@
             </div>
         </div>
     </section>
+    <hr>
     <section class="row img-gallery">
         {% for key, p in projects %}
         {% if p.title != project.title %}
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 project"
+        <div class="col-lg-4
+                    col-md-4
+                    col-sm-6
+                    col-xs-12
+                    project {{p.type}}"
              style="background-image:
              url('{{p.imageDir + p.mainImage}}')">
             <div class="project-hover"

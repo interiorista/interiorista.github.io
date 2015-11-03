@@ -18,8 +18,31 @@ function addSpace($element) {
 $(document).ready(function() {
     addSpace($('#main'));
 
+    // Load images gallery.
+    var $grid = $('.grid');
+    imagesLoaded($grid, function() {
+        // Initialise Masonry
+        $grid.masonry({
+
+            // set itemSelector so .grid-sizer is not used in layout
+            itemSelector: '.grid-item',
+            stamp: '.stamp',
+
+            // use element for option
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+
+        // Ease in the grid.
+        $grid.animate({
+            "opacity": 1
+        }, "slow");
+    });
+
+
+    // Load projects gallery.
     var $gallery = $('.img-gallery');
-    imagesLoaded( $gallery, function() {
+    imagesLoaded($gallery, function() {
 
         // Ease in the grid.
         $gallery.animate({
