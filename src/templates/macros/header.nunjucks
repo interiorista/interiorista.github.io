@@ -11,8 +11,10 @@
                                         col-md-12
                                         col-sm-12
                                         col-xs-12">
-                                <img src="public/images/logo.svg"
-                                     class="img-responsive center-block"/>
+                                <a href="projects.html">
+                                    <img src="public/images/logo.svg"
+                                         class="img-responsive center-block"/>
+                                </a>
                             </div>
                             <div class="col-lg-12
                                         col-md-12
@@ -26,7 +28,9 @@
 
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
-                        <h4 class="text-uppercase">Nosotras</h4>
+                        <h4 class="text-uppercase">
+                            <a href="about.html" class="grey">Nosotras</a>
+                        </h4>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
                         <h4 class="text-uppercase filter toggleResidential">
