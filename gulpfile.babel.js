@@ -17,6 +17,7 @@ import nunjucksRender from 'gulp-nunjucks-render';
 import data from 'gulp-data';
 import fs from 'fs';
 import nunjucks from 'nunjucks';
+import gutil from 'gulp-util';
 
 const dependencies = [
     'underscore'
@@ -79,6 +80,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('nunjucks', function() {
+    var start = Date.now();
     nunjucksRender.nunjucks.configure(['src/templates/']);
 
     let json = JSON.parse(fs.readFileSync('src/data/carousel.json', 'utf8')),
@@ -94,6 +96,13 @@ gulp.task('nunjucks', function() {
             return doc;
         }))
         .pipe(nunjucksRender())
+        .on('error', function(err) {
+            gutil.log(gutil.colors.red(err.toString()));
+        })
+        .on('end', function() {
+            gutil.log(gutil.colors.green('Finished recompiling in',
+                (Date.now() - start) + 'ms.'));
+        })
         .pipe(gulp.dest('.'))
 });
 
