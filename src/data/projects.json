@@ -45,7 +45,7 @@
         "quiñones": {
             "title": "Departamento José Quiñones",
             "imageDir": "public/images/quiñones/",
-            "mainImage": "1.jpg",
+            "mainImage": "1.JPG",
             "href": "quiñones.html",
             "type": "residential"
         }
