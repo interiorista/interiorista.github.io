@@ -1,0 +1,67 @@
+{% macro view(type='all', projects=[], carousel=[]) %}
+
+<div class="wrapper">
+    <div class="container">
+        {% if type == 'all' %}
+        <main>
+            <div class="row text-center">
+                <div class="col-lg-12
+                            col-md-12
+                            col-sm-12
+                            col-xs-12">
+                    <div class="carousel">
+                        {% for img in carousel %}
+                        <div>
+                            <img class="img-carousel"
+                                 src="public/images/carousel/{{img}}"
+                                 alt="Featured Image" />
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% endif %}
+        <section class="row img-gallery">
+            {% if type == 'all' %}
+                {% for key, project in projects %}
+                <div class="col-lg-4
+                        col-md-4
+                        col-sm-6
+                        col-xs-12
+                        project {{project.type}}"
+                     style="background-image:
+                        url('{{project.imageDir + project.mainImage}}')">
+                    <div class="project-hover"
+                         data-nav="{{project.href}}">
+                        <h4 class="project-text">
+                            {{project.title}}
+                        </h4>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                {% for key, project in projects %}
+                    {% if project.type == type %}
+                    <div class="col-lg-4
+                                col-md-4
+                                col-sm-6
+                                col-xs-12
+                                project {{project.type}}"
+                         style="background-image:
+                                url('{{project.imageDir + project.mainImage}}')">
+                        <div class="project-hover"
+                             data-nav="{{project.href}}">
+                            <h4 class="project-text">
+                                {{project.title}}
+                            </h4>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </section>
+    </div>
+</div>
+
+{% endmacro %}

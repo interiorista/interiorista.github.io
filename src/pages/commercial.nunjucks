@@ -7,6 +7,6 @@
 
 {{nav.active('projects')}}
 
-{{proj.view('all', projects, carousel)}}
+{{proj.view('commercial', projects, carousel)}}
 
 {% endblock %}
