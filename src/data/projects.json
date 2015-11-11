@@ -10,14 +10,14 @@
         "monte-carmelo": {
             "title": "Departamento Monte Carmelo",
             "imageDir": "public/images/monte-carmelo/",
-            "mainImage": "1.jpg",
+            "mainImage": "mc-1.jpg",
             "href": "monte-carmelo.html",
             "type": "residential"
         },
         "la-floresta": {
             "title": "Departamento La Floresta",
             "imageDir": "public/images/la-floresta/",
-            "mainImage": "1.jpg",
+            "mainImage": "lf-1.jpg",
             "href": "la-floresta.html",
             "type": "residential"
         },
@@ -31,14 +31,14 @@
         "golf-los-incas": {
             "title": "Departamento Golf Los Incas",
             "imageDir": "public/images/golf-los-incas/",
-            "mainImage": "1.jpg",
+            "mainImage": "glf-1.jpg",
             "href": "golf-los-incas.html",
             "type": "residential"
         },
         "angamos": {
             "title": "Departamento Avenida Angamos",
             "imageDir": "public/images/angamos/",
-            "mainImage": "1.jpg",
+            "mainImage": "a-1.jpg",
             "href": "angamos.html",
             "type": "residential"
         },
