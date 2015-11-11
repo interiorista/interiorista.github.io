@@ -3,7 +3,7 @@
         "paz-soldan": {
             "title": "Departamento Paz Soldán",
             "imageDir": "public/images/paz-soldan/",
-            "mainImage": "1.jpg",
+            "mainImage": "ps-1.jpg",
             "href": "paz-soldan.html",
             "type": "residential"
         },
