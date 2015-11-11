@@ -12,9 +12,10 @@
                     <div class="carousel">
                         {% for img in carousel %}
                         <div>
-                            <img class="img-carousel"
-                                 src="public/images/carousel/{{img}}"
-                                 alt="Featured Image" />
+                            <div class="img-carousel"
+                                 style="background-image:
+                                   url('public/images/carousel/{{img}}')">
+                            </div>
                         </div>
                         {% endfor %}
                     </div>

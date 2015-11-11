@@ -94,7 +94,7 @@ a.grey {
 .img-carousel {
   max-width: 100%;
   height: 500px;
-  margin: auto;
+  background: transparent no-repeat center;
 }
 
 .grid {
@@ -168,6 +168,24 @@ h1, h2, h3, h4, h5, h6 {
 // Make carousel arrows black.
 .slick-prev:before, .slick-next:before {
   color: black !important;
+  opacity: 1 !important;
+}
+
+.slick-next, .slick-prev {
+  opacity: 1 !important;
+  z-index: 50;
+}
+
+.slick-prev {
+  @media (max-width: @screen-xs-max) {
+    left: -10px !important;
+  }
+}
+
+.slick-next {
+  @media (max-width: @screen-xs-max) {
+    right: -10px !important;
+  }
 }
 
 .filter:hover {
